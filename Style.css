@@ -1,0 +1,15 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  font-size: 2em;
+  margin: 0;
+  text-align: center;
+}

@@ -1,0 +1,57 @@
+Slageng Website — Content Layout Blueprint
+Use this as your reference when building each section.
+
+1. Header / Navigation Bar
+Element	Content
+Logo	Slageng
+Menu Links	Home	Shisa Nyama & Grill	Upcoming Events	VIP Booking	Gallery	Contact
+Placement: Top of every page.
+
+2. Home Page (Hero Section)
+Element	Content
+Headline	The Ultimate Soul & Entertainment Hub of Polokwane
+Subheadline	Premium vibes, local culture, and the biggest national DJs right in the heart of Seshego Zone 1.
+CTA Button 1	Book a VIP Table
+CTA Button 2	View Weekend Lineup
+Placement: First thing users see when they visit.
+
+Visual: Hero Banner Image Prompt — "A high-end, modern South African lifestyle lounge and bar at night. Moody purple and neon ambient lighting, sleek architecture, crowded dance floor with a professional DJ booth, energetic nightlife atmosphere, realistic photo."
+
+3. About Slageng (The Kasi Experience)
+Element	Content
+Heading	About Slageng — The Kasi Experience
+Text	"Welcome to Slageng, the ultimate butcher and entertainment oasis where premium nightlife meets authentic local heritage. We are dedicated to providing an upscale, trendy space that spotlights elite local talent alongside South Africa’s finest national music icons. Whether you are stepping in for a legendary weekend party, a relaxed afternoon braai, or sundowners on our rooftop seating, we guarantee top-tier service, pure energy, and an unforgettable experience."
+Placement: Below the hero section.
+
+4. The Menu (Shisa Nyama & Drinks)
+Element	Content
+Heading	The Menu — Shisa Nyama & Drinks
+The Grill / Butcher	Premium selection of locally sourced meats, expertly braaied over open flames to your perfect preference.
+The Bar	A massive, top-shelf liquor selection, signature crafted cocktails, an elite beer menu, and premium wine lists.
+The Setup	Enjoy sit-down table service inside or soak in the breeze with our outdoor and rooftop seating zones.
+Visual 1: Grill & Food Section Image Prompt — "A gourmet South African Shisa Nyama platters featuring premium flame-grilled steaks, boerewors, and chicken wings served on a modern wooden board, accompanied by upscale cocktails on a restaurant table, professional food photography."
+
+Visual 2: Rooftop/Vibe Image Prompt — "Trendy outdoor rooftop seating area of a luxury nightclub during sunset, stylish young adults laughing and socializing, overlooking a vibrant city landscape, modern chic aesthetic."
+
+5. Event & Booking Information
+Element	Content
+Heading	Operating Hours & Bookings
+Monday	09:00 AM – 02:00 AM
+Tuesday – Wednesday	09:00 AM – 09:00 PM
+Thursday – Sunday	09:00 AM – 02:00 AM
+Reservations Text	"Planning a birthday celebration, a premium squad link-up, or looking for the ultimate VIP lounge treatment? Out-of-town guests and large groups can coordinate directly with our team for custom seating arrangements and priority entrance."
+6. Gallery Section
+Display images of the venue, food, and events.
+
+7. Contact Section
+Element	Content
+Location	Seshego Zone 1, Polokwane
+Phone	(Add number)
+Email	(Add email)
+Social Links	(Add Instagram, Facebook, TikTok)
+8. Footer
+Element	Content
+Logo	Slageng
+Quick Links	Home	Shisa Nyama & Grill	Upcoming Events	VIP Booking	Gallery	Contact
+Copyright	© 2025 Slageng. All Rights Reserved.
+Page Structure Summary
