@@ -119,3 +119,62 @@ h2 {
   font-weight: bold;
   color: #fff;
 }
+
+.Welcome {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  flex: 0 0 200px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.Welcome:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px black;
+}
+.content-box {
+  background-color: #fa4a0c;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 95%;
+  text-align: center;
+  justify-content: center;
+}
+
+.dj-images {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  flex: 0 0 200px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #fa4a0c;
+  margin: 20px auto;
+  max-width: 80%;
+}
+
+.dj-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+  padding: 20px;
+}
+.dj-images:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px #fe8e1b;
+}
