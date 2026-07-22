@@ -4,13 +4,30 @@ body {
 }
 
 header {
+  position: sticky;
   background-color: #fa4a0c;
   padding: 5px;
+  border-radius: 10px;
+  height: 80px;
+  top: 0;
+}
+h2 {
+  padding: 10px;
+  font-size: 1.5em;
+  margin: 10px;
+  text-align: center;
 }
 h1 {
+  padding: 10px 20px;
   font-size: 2em;
-  margin: 10px 0;
+  margin: 10px auto;
   text-align: center;
+  background-color: #fa4a0c;
+  border-radius: 10px;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  justify-content: center;
 }
 .nav-link {
   text-decoration: none;
@@ -55,8 +72,8 @@ h1 {
 .logo {
   display: inline-block;
   vertical-align: middle;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   transition: all 0.3s ease;
   object-fit: cover;
@@ -65,4 +82,40 @@ h1 {
 .logo:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px #d65d18;
+}
+
+.section-image {
+  background-image: url(content/IMG_20260710_113857.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+.top-content {
+  margin-top: 80px;
+  padding: 5px;
+  text-align: center;
+  background-color: #fa4a0c;
+  border-radius: 10px;
+  height: auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-text {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
 }
