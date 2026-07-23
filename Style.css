@@ -27,6 +27,7 @@ h1 {
   width: fit-content;
   max-width: 100%;
   justify-content: center;
+  padding: 20px;
 }
 .nav-link {
   text-decoration: none;
@@ -48,26 +49,6 @@ h1 {
   color: white;
 }
 
-.vip-link {
-  text-decoration: none;
-  background-color: #d65d18;
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.vip-link:hover {
-  transform: scale(1.1);
-  background-color: #fe8e1b;
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(214, 93, 24, 0.4);
-  color: white;
-}
 .logo {
   display: inline-block;
   vertical-align: middle;
@@ -271,6 +252,7 @@ td a:hover {
   width: auto;
   max-width: 100%;
   max-height: 100%;
+  padding: 5px;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -282,6 +264,7 @@ td a:hover {
   max-height: 100%;
   max-width: 100%;
   width: auto;
+  padding: 5px;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -294,4 +277,7 @@ td a:hover {
 .Small-image:hover {
   transform: scale(1.2);
   box-shadow: 0 8px 25px #fe8e1b;
+}
+p {
+  text-align: center;
 }
