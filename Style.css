@@ -311,3 +311,118 @@ p {
   box-shadow: 0 0 20px #d65d18;
   transform: scale(0.97);
 }
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fa4a0c;
+  margin: 5% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+  color: #d65d18;
+}
+
+/* Form labels */
+.modal-content label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* Form inputs */
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #d65d18;
+  color: white;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.modal-content input::placeholder,
+.modal-content textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.modal-content textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+/* Submit button */
+.btn-submit {
+  background-color: #d65d18;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #fe8e1b;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(214, 93, 24, 0.4);
+}
+
+.btn-submit:active {
+  transform: scale(0.97);
+}
+
+/* Book now button */
+.book-table {
+  background-color: #d65d18;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-table:hover {
+  transform: scale(1.1);
+  background-color: #fe8e1b;
+  box-shadow: 0 8px 20px rgba(214, 93, 24, 0.4);
+}
