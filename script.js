@@ -8,14 +8,18 @@ const btn = document.getElementById("bookNowBtn");
 const closeBtn = document.querySelector(".close-btn");
 
 // Open modal when clicked
-btn.onclick = function () {
-  modal.style.display = "block";
-};
+if (btn) {
+  btn.onclick = function () {
+    modal.style.display = "block";
+  };
+}
 
 // Close the modal
-closeBtn.onclick = function () {
-  modal.style.display = "none";
-};
+if (closeBtn) {
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+}
 
 // Close the modal when clicking out side
 window.onclick = function (event) {
@@ -25,9 +29,22 @@ window.onclick = function (event) {
 };
 
 //Submission of the form
-document.getElementById("bookingForm").onsubmit = function (e) {
-  e.preventDefault();
-  alert("✅ Booking submitted! We will contact you shortly.");
-  modal.style.display = "none";
-  this.reset();
-};
+const bookingForm = document.getElementById("bookingForm");
+if (bookingForm) {
+  bookingForm.onsubmit = function (e) {
+    e.preventDefault();
+    alert("✅ Booking submitted! We will contact you shortly.");
+    modal.style.display = "none";
+    this.reset();
+  };
+}
+
+//Hamburger
+// Hamburger menu toggle
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", function () {
+  navLinks.classList.toggle("active");
+});
+console.log("Script loaded!");

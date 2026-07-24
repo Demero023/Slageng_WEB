@@ -328,13 +328,17 @@ p {
 .modal-content {
   background-color: #fa4a0c;
   margin: 10% auto;
-  padding: 20px;
+  padding: 10px;
   width: 90%;
   max-width: 400px;
   border-radius: 10px;
   color: white;
   position: relative;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+.modal-content h2 {
+  font-size: 1.3em; /* Add this */
+  margin-top: 0;
 }
 
 /* Close button */
@@ -356,7 +360,7 @@ p {
 /* Form labels */
 .modal-content label {
   display: block;
-  margin: 15px 0 5px;
+  margin: 8px 0 3px;
   font-weight: bold;
   font-size: 1em;
 }
@@ -380,7 +384,7 @@ p {
 }
 
 .modal-content textarea {
-  height: 80px;
+  height: 50px;
   resize: vertical;
 }
 
@@ -425,4 +429,55 @@ p {
   transform: scale(1.1);
   background-color: #fe8e1b;
   box-shadow: 0 8px 20px rgba(214, 93, 24, 0.4);
+}
+
+/* Make nav flexible */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 20px;
+  height: 2px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+/* Navigation links (desktop) */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fa4a0c;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
 }
