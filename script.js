@@ -23,3 +23,11 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+//Submission of the form
+document.getElementById("bookingForm").onsubmit = function (e) {
+  e.preventDefault();
+  alert("✅ Booking submitted! We will contact you shortly.");
+  modal.style.display = "none";
+  this.reset();
+};
