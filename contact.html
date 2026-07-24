@@ -21,7 +21,7 @@
           <span></span>
           <span></span>
         </div>
-         <div class="nav-links" id="navLinks">
+        <div class="nav-links" id="navLinks">
           <a class="nav-link" href="events.html">Events</a>
           <a class="nav-link" href="contact.html">Contact</a>
           <a class="nav-link" href="about.html">About</a>
@@ -35,36 +35,115 @@
       <!-- Booking table-->
       <button class="book-table" id="bookNowBtn">Book now</button>
     </section>
+
+    <section class="content-box">
+      <p>Chat on Whatsapp</p>
+      <a href="https://wa.me/27765271293" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </section>
+    <section class="content-box">
+      <p>Our instagram page</p>
+      <a href="https://instagram.com/yourpage" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </section>
+
+    <section class="content-box">
+      <p>Our Facebook Page</p>
+      <a href="https://facebook.com/yourpage" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </section>
+
     <!-- modal for the from-->
-    <div id="bookingModal" class="modal"> <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>📅 Book a VIP Table</h2>
-            <form id="bookingForm">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Your full name" required />
+    <div id="bookingModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>📅 Book a VIP Table</h2>
+        <form id="bookingForm">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Your full name" required />
 
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="076 527 1293" required />
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="076 527 1293" required />
 
-                <label for="date">Date</label>
-                <input type="date" id="date" required />
+          <label for="date">Date</label>
+          <input type="date" id="date" required />
 
-                <label for="guests">Number of Guests</label>
-                <input type="number" id="guests" placeholder="How many people?" required />
+          <label for="guests">Number of Guests</label>
+          <input
+            type="number"
+            id="guests"
+            placeholder="How many people?"
+            required
+          />
 
-                <label for="message">Special Requests</label>
-                <textarea id="message" placeholder="Any special requests?"></textarea>
+          <label for="message">Special Requests</label>
+          <textarea id="message" placeholder="Any special requests?"></textarea>
 
-                <button type="submit" class="btn-submit">Submit Booking</button>
-            </form>
-        </div>
+          <button type="submit" class="btn-submit">Submit Booking</button>
+        </form>
+      </div>
     </div>
 
+    <footer class="footer">
+      <!-- table of 3 colums -->
+      <table class="footer-table">
+        <tr>
+          <th>Slageng EST 2006</th>
+          <th>Quick Links</th>
+          <th>Social Media</th>
+        </tr>
+        <tr>
+          <td>
+            <a href="home.html">
+              <img
+                src="content/logo.png"
+                alt="Slageng Logo"
+                class="footer-logo"
+              />
+            </a>
+          </td>
+          <td><a href="home.html">Home</a></td>
+          <td>
+            <a href="https://instagram.com/yourpage" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://facebook.com/yourpage" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>127 Chris Hani Drive, Seshego Zone 1 Complex</td>
+          <td><a href="events.html">Events</a></td>
+          <!-- whatsApp-->
+          <td>
+            <a href="https://wa.me/27765271293" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>© 2026 Slageng. All rights reserved.</td>
+          <td><a href="contact.html">Contact Us</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><a href="about.html">About Us</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><a href="Community.html">Our Community</a></td>
+          <td></td>
+        </tr>
+      </table>
+    </footer>
     <!-- JavaScript link -->
     <script src="script.js"></script>
-</body>
-</html>
-
-
   </body>
 </html>
