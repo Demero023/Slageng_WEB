@@ -28,17 +28,6 @@ window.onclick = function (event) {
   }
 };
 
-//Submission of the form
-const bookingForm = document.getElementById("bookingForm");
-if (bookingForm) {
-  bookingForm.onsubmit = function (e) {
-    e.preventDefault();
-    alert("✅ Booking submitted! We will contact you shortly.");
-    modal.style.display = "none";
-    this.reset();
-  };
-}
-
 //Hamburger
 // Hamburger menu toggle
 const hamburger = document.getElementById("hamburger");
@@ -48,3 +37,35 @@ hamburger.addEventListener("click", function () {
   navLinks.classList.toggle("active");
 });
 console.log("Script loaded!");
+
+//Saving form
+//Saving form — Combined version
+const bookingForm = document.getElementById("bookingForm");
+if (bookingForm) {
+  bookingForm.onsubmit = function (e) {
+    e.preventDefault();
+
+    const formData = {
+      name: document.getElementById("name").value,
+      phone: document.getElementById("phone").value,
+      date: document.getElementById("date").value,
+      guests: document.getElementById("guests").value,
+      message: document.getElementById("message").value,
+    };
+
+    // Send data to Google Sheets
+    fetch(
+      "https://script.google.com/macros/s/AKfycbw60mccnKXi1KoV8tPKHnf7HAh_ZG17rlmmKcrUOnHRzs1-sxCnEtPMCQp4Xf7HMtcq7Q/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      },
+    );
+
+    alert("✅ Booking submitted! We'll contact you shortly.");
+    document.getElementById("bookingForm").reset();
+    document.getElementById("bookingModal").style.display = "none";
+  };
+}
