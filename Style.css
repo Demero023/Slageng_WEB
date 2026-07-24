@@ -281,3 +281,33 @@ td a:hover {
 p {
   text-align: center;
 }
+.book-table {
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 2em;
+  font-family: inherit;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #d65d18;
+  text-decoration: none;
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  outline: none;
+  border: #fa4a0c;
+  transition: all 0.3s ease;
+}
+
+.book-table:hover {
+  transform: scale(1.1);
+  background-color: #fe8e1b;
+  box-shadow: 0 8px 20px rgba(214, 93, 24, 0.4);
+  color: white;
+}
+.book-table:active {
+  box-shadow: 0 0 20px #d65d18;
+  transform: scale(0.97);
+}
