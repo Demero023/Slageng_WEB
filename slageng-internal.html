@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slageng Dashboard</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="home.html">
+          <img src="content/logo.png" alt="Slageng Logo" class="logo" />
+        </a>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a class="nav-link" href="dashboard.html">Dashboard</a>
+          <a class="nav-link" href="home.html">Home</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="content-box">
+      <h1>📋 Bookings Dashboard</h1>
+
+      <!-- Password section -->
+      <div id="loginSection">
+        <label for="passwordInput">Enter password to view bookings:</label>
+        <input
+          type="password"
+          id="passwordInput"
+          placeholder="Enter password"
+          style="padding: 10px; margin: 10px; width: 200px"
+        />
+        <button
+          class="book-table"
+          id="loginBtn"
+          style="font-size: 16px; padding: 10px 25px"
+        >
+          View Bookings
+        </button>
+      </div>
+
+      <!-- Bookings table (hidden until password is correct) -->
+      <div
+        id="bookingTableSection"
+        style="overflow-x: auto; -webkit-overflow-scrolling: touch"
+      >
+        <table
+          id="bookingTable"
+          style="
+            width: 100%;
+            max-width: 100%;
+            border-collapse: collapse;
+            background-color: #1a1a1a;
+            color: white;
+            border-radius: 10px;
+            overflow: hidden;
+          "
+        >
+          <thead>
+            <tr style="background-color: #fa4a0c">
+              <th style="padding: 10px">Timestamp</th>
+              <th style="padding: 10px">Name</th>
+              <th style="padding: 10px">Phone</th>
+              <th style="padding: 10px">Date</th>
+              <th style="padding: 10px">Guests</th>
+              <th style="padding: 10px">Message</th>
+            </tr>
+          </thead>
+          <tbody id="bookingTableBody">
+            <tr>
+              <td colspan="6" style="text-align: center; padding: 20px"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Slageng EST 2006 © All rights reserved.</p>
+    </footer>
+
+    <script>
+      // password here
+      const correctPassword = "MojeKHOMO@3";
+
+      // Get elements
+      const loginSection = document.getElementById("loginSection");
+      const bookingTableSection = document.getElementById(
+        "bookingTableSection",
+      );
+      const loginBtn = document.getElementById("loginBtn");
+      const passwordInput = document.getElementById("passwordInput");
+
+      // Web App URL (Google Apps Script that returns data)
+      const webAppUrl =
+        "https://script.google.com/macros/s/AKfycbyUDYTc-m2Uk4F_37u6z7B12f0eVsj2wyupYfBfRAqA75eHYSVDZyqSCoSaYV-fMbMVXg/exec?callback=?";
+
+      // Login button click
+      loginBtn.addEventListener("click", function () {
+        const enteredPassword = passwordInput.value;
+        if (enteredPassword === correctPassword) {
+          loginSection.style.display = "none";
+          bookingTableSection.style.display = "block";
+          fetchBookings();
+        } else {
+          alert("❌ Incorrect password. Try again.");
+          passwordInput.value = "";
+        }
+      });
+
+      // Enter key to submit password
+      passwordInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          loginBtn.click();
+        }
+      });
+
+      function fetchBookings() {
+        fetch(webAppUrl)
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then(function (data) {
+            var tableBody = document.getElementById("bookingTableBody");
+            tableBody.innerHTML = "";
+
+            if (data.length === 0) {
+              tableBody.innerHTML =
+                '<tr><td colspan="6" style="text-align:center;">No bookings yet.</td></tr>';
+              return;
+            }
+
+            for (var i = 0; i < data.length; i++) {
+              var row =
+                "<tr>" +
+                '<td style="padding:10px;">' +
+                new Date(data[i].timestamp).toLocaleString() +
+                "</td>" +
+                '<td style="padding:10px;">' +
+                data[i].name +
+                "</td>" +
+                '<td style="padding:10px;">' +
+                data[i].phone +
+                "</td>" +
+                '<td style="padding:10px;">' +
+                new Date(data[i].date).toLocaleDateString() +
+                "</td>" +
+                '<td style="padding:10px;">' +
+                data[i].guests +
+                "</td>" +
+                '<td style="padding:10px;">' +
+                data[i].message +
+                "</td>" +
+                "</tr>";
+              tableBody.innerHTML += row;
+            }
+          })
+          .catch(function (error) {
+            console.error("Error:", error);
+            document.getElementById("bookingTableBody").innerHTML =
+              '<tr><td colspan="6" style="text-align:center;">❌ Failed to load bookings.</td></tr>';
+          });
+      }
+    </script>
+    <!-- JavaScript link -->
+    <script src="script.js"></script>
+  </body>
+</html>

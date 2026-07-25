@@ -485,3 +485,7 @@ nav {
     display: flex;
   }
 }
+/* Remove blue tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
