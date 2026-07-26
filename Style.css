@@ -489,3 +489,30 @@ nav {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+.menu-images {
+  border-radius: 20px;
+  height: 350px;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  padding: 5px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.menu-images:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px #fe8e1b;
+}
+.image-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.image-row img {
+  width: 30%;
+  border-radius: 10px;
+}
