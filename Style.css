@@ -516,3 +516,18 @@ nav {
   width: 30%;
   border-radius: 10px;
 }
+
+.videos {
+  border-radius: 20px;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  padding: 5px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.videos:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px #fe8e1b;
+}
