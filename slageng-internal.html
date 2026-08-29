@@ -28,25 +28,7 @@
     <section class="content-box">
       <h1>📋 Bookings Dashboard</h1>
 
-      <!-- Password section -->
-      <div id="loginSection">
-        <label for="passwordInput">Enter password to view bookings:</label>
-        <input
-          type="password"
-          id="passwordInput"
-          placeholder="Enter password"
-          style="padding: 10px; margin: 10px; width: 200px"
-        />
-        <button
-          class="book-table"
-          id="loginBtn"
-          style="font-size: 16px; padding: 10px 25px"
-        >
-          View Bookings
-        </button>
-      </div>
-
-      <!-- Bookings table (hidden until password is correct) -->
+      <!-- Bookings table (always visible) -->
       <div
         id="bookingTableSection"
         style="overflow-x: auto; -webkit-overflow-scrolling: touch"
@@ -75,7 +57,9 @@
           </thead>
           <tbody id="bookingTableBody">
             <tr>
-              <td colspan="6" style="text-align: center; padding: 20px"></td>
+              <td colspan="6" style="text-align: center; padding: 20px">
+                Loading bookings...
+              </td>
             </tr>
           </tbody>
         </table>
@@ -87,40 +71,9 @@
     </footer>
 
     <script>
-      // password here
-      const correctPassword = "MojeKHOMO@3";
-
-      // Get elements
-      const loginSection = document.getElementById("loginSection");
-      const bookingTableSection = document.getElementById(
-        "bookingTableSection",
-      );
-      const loginBtn = document.getElementById("loginBtn");
-      const passwordInput = document.getElementById("passwordInput");
-
       // Web App URL (Google Apps Script that returns data)
       const webAppUrl =
-        "https://script.google.com/macros/s/AKfycbyUDYTc-m2Uk4F_37u6z7B12f0eVsj2wyupYfBfRAqA75eHYSVDZyqSCoSaYV-fMbMVXg/exec?callback=?";
-
-      // Login button click
-      loginBtn.addEventListener("click", function () {
-        const enteredPassword = passwordInput.value;
-        if (enteredPassword === correctPassword) {
-          loginSection.style.display = "none";
-          bookingTableSection.style.display = "block";
-          fetchBookings();
-        } else {
-          alert("❌ Incorrect password. Try again.");
-          passwordInput.value = "";
-        }
-      });
-
-      // Enter key to submit password
-      passwordInput.addEventListener("keydown", function (e) {
-        if (e.key === "Enter") {
-          loginBtn.click();
-        }
-      });
+        "https://script.google.com/macros/s/AKfycbxxA-TvgRhQYf1j4TLzHbHE5Az-58YXFiLibH_viDuFMb8EXpFv1reJmeSQKJRf8-aIDg/exec";
 
       function fetchBookings() {
         fetch(webAppUrl)
@@ -171,8 +124,10 @@
               '<tr><td colspan="6" style="text-align:center;">❌ Failed to load bookings.</td></tr>';
           });
       }
+
+      // Load bookings immediately
+      fetchBookings();
     </script>
-    <!-- JavaScript link -->
     <script src="script.js"></script>
   </body>
 </html>
