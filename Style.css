@@ -31,7 +31,7 @@ h1 {
 }
 .nav-link {
   text-decoration: none;
-  background-color: #ff2d95;
+  background-color: #9b30ff;
   color: white;
   padding: 12px 30px;
   border: none;
@@ -44,8 +44,8 @@ h1 {
 
 .nav-link:hover {
   transform: scale(1.1);
-  background-color: #9b30ff;
-  box-shadow: 0 8px 20px rgba(155, 48, 255, 0.4);
+  background-color: #ff2d95;
+  box-shadow: 0 8px 20px rgba(255, 45, 149, 0.4);
   color: white;
 }
 
@@ -61,7 +61,7 @@ h1 {
 
 .logo:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px #9b30ff;
+  box-shadow: 0 0 20px #ff2d95;
 }
 
 .section-image {
@@ -167,7 +167,7 @@ hr {
 }
 .dj-images:hover {
   transform: scale(1.08);
-  box-shadow: 0 8px 25px #9b30ff;
+  box-shadow: 0 8px 25px #ff2d95;
 }
 .Menu-box {
   background-color: #1a0a2e;
@@ -192,7 +192,7 @@ hr {
 .review-link {
   text-decoration: none;
   color: white;
-  background-color: #ff2d95;
+  background-color: #9b30ff;
   padding: 10px;
   border-radius: 10px;
   margin: 20px 20px;
@@ -201,7 +201,7 @@ hr {
 }
 
 .footer {
-  background-color: #ff2d95;
+  background-color: #9b30ff;
   padding: 20px;
   text-align: center;
   color: white;
@@ -502,7 +502,7 @@ nav {
   max-height: 100%;
   max-width: 100%;
   width: auto;
-  padding: 5px;
+  padding: 1px;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -543,8 +543,22 @@ nav {
   max-height: 100%;
   max-width: 100%;
   width: auto;
-  padding: 5px;
+  padding: 1px;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+}
+.Community-image {
+  border-radius: 20px;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  padding: 1px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.Community-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px #9b30ff;
 }
