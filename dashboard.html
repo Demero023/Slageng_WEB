@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slageng Event Manager</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="content/logo.png" alt="Slageng Logo" class="logo" />
+        </a>
+        <div class="nav-links">
+          <a class="nav-link" href="event-manager.html">Event Manager</a>
+          <a class="nav-link" href="dashboard.html">Bookings</a>
+          <a class="nav-link" href="index.html">Home</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="content-box">
+      <h1>📅 Event Manager</h1>
+
+      <!-- Add Event Form -->
+      <section class="form-section">
+        <h2>Add New Event</h2>
+        <form id="eventForm">
+          <label>Event Name</label>
+          <input
+            type="text"
+            id="eventName"
+            placeholder="e.g. Kabza De Small Live"
+            required
+          />
+
+          <label>Date</label>
+          <input type="date" id="eventDate" required />
+
+          <label>Artist / DJ</label>
+          <input
+            type="text"
+            id="eventArtist"
+            placeholder="e.g. Kabza De Small"
+          />
+
+          <label>Image URL</label>
+          <input
+            type="text"
+            id="eventImage"
+            placeholder="https://i.postimg.cc/xxx.jpg"
+          />
+
+          <label>Description</label>
+          <textarea
+            id="eventDescription"
+            placeholder="Event details..."
+          ></textarea>
+
+          <button type="submit" class="btn-submit">Add Event</button>
+        </form>
+      </section>
+
+      <!-- Event List -->
+      <section class="event-list-section">
+        <h2>Current Events</h2>
+        <div id="eventList">
+          <p>Loading events...</p>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <p>Slageng EST 2006 © All rights reserved.</p>
+    </footer>
+
+    <script src="event-manager.js"></script>
+  </body>
+</html>

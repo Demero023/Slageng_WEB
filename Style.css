@@ -1,15 +1,58 @@
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.floating-book-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff2d95;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(255, 45, 149, 0.5);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.floating-book-btn:hover {
+  transform: scale(1.1);
+  background-color: #9b30ff;
+  box-shadow: 0 8px 30px rgba(155, 48, 255, 0.6);
+}
+
 body {
   background-color: #0d0b1a;
   color: white;
 }
 
-header {
-  position: sticky;
+.header {
   background-color: #1a0a2e;
   padding: 5px;
   border-radius: 10px;
-  height: 80px;
-  top: 0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.home-header {
+  background-color: #1a0a2e;
+  padding: 5px;
+  border-radius: 10px;
+  height: 600px;
+  background-image: url(https://i.postimg.cc/TwsRrD2S/IMG-20260907-141412.jpg);
+  background-position: sticky;
+  background-size: cover;
+  background-position: center;
+  max-height: 100%;
 }
 h2 {
   padding: 10px;
@@ -29,6 +72,7 @@ h1 {
   justify-content: center;
   padding: 20px;
   color: #ff2d95;
+  box-shadow: 0 4px 20px rgba(155, 48, 255, 0.4);
 }
 .nav-link {
   text-decoration: none;
@@ -66,7 +110,6 @@ h1 {
 }
 
 .section-image {
-  background-image: url(content/IMG_20260710_113857.jpg);
   background-size: cover;
   background-position: center;
   height: auto;
@@ -79,7 +122,7 @@ h1 {
     box-shadow 0.7s ease;
 }
 .section-image:hover {
-  box-shadow: 0 8px 40px #9b30ff;
+  box-shadow: 0 8px 40px rgba(155, 48, 255, 0.4);
 }
 .top-content {
   margin-top: 80px;
@@ -94,6 +137,7 @@ h1 {
   align-items: center;
   justify-content: center;
   margin: 20px auto;
+  box-shadow: 0 4px 20px rgba(155, 48, 255, 0.4);
 }
 
 .content-text {
@@ -125,7 +169,7 @@ h2 {
 
 .Welcome:hover {
   transform: scale(1.08);
-  box-shadow: 0 8px 25px black;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 .content-box {
   background-color: #1a0a2e;
@@ -135,6 +179,7 @@ h2 {
   max-width: 95%;
   text-align: center;
   justify-content: center;
+  box-shadow: 0 4px 20px rgba(155, 48, 255, 0.4);
 }
 
 .dj-images {
@@ -159,29 +204,36 @@ hr {
 }
 
 .dj-images-container {
+  background-color: #1a0a2e;
+  border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   max-width: 95%;
   padding: 20px;
+  border-radius: 10px;
 }
 .dj-images:hover {
   transform: scale(1.08);
-  box-shadow: 0 8px 25px #ff2d95;
+  box-shadow: 0 8px 25px rgba(255, 45, 149, 0.4);
 }
-.Menu-box {
-  background-color: #1a0a2e;
-  padding: 10px;
+.contact-images {
+  align-items: center;
+  max-width: 20%;
+  width: 200px;
+  height: auto;
   border-radius: 10px;
-  margin: 20px auto;
-  max-width: 95%;
+  flex: 0 0 200px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
-.menu-image {
-  border-radius: 10px;
-  display: block;
-  object-fit: cover;
+.contact-images:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(255, 45, 149, 0.4);
 }
+
 .map {
   width: 100%;
   height: 400px;
@@ -278,12 +330,12 @@ td a:hover {
 }
 .Big-image:hover {
   transform: scale(1.2);
-  box-shadow: 0 8px 25px #ff2d95;
+  box-shadow: 0 8px 25px rgba(255, 45, 149, 0.4);
 }
 
 .Small-image:hover {
   transform: scale(1.2);
-  box-shadow: 0 8px 25px #ff2d95;
+  box-shadow: 0 8px 25px rgba(255, 45, 149, 0.4);
 }
 p {
   text-align: center;
@@ -315,7 +367,7 @@ p {
   color: white;
 }
 .book-table:active {
-  box-shadow: 0 0 20px #9b30ff;
+  box-shadow: 0 0 20px rgba(155, 48, 255, 0.4);
   transform: scale(0.97);
 }
 
@@ -497,28 +549,6 @@ nav {
   -webkit-tap-highlight-color: transparent;
 }
 
-.menu-images {
-  border-radius: 20px;
-  height: 350px;
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  padding: 1px;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.menu-images:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 25px #ff2d95;
-}
-.image-row {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 .image-row img {
   width: 30%;
   border-radius: 10px;
@@ -537,7 +567,7 @@ nav {
 }
 .videos:hover {
   transform: scale(1.1);
-  box-shadow: 0 10px 25px #ff2d95;
+  box-shadow: 0 10px 25px rgba(255, 45, 149, 0.5);
 }
 .touchlines {
   border-radius: 20px;

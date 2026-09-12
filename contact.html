@@ -29,9 +29,9 @@
     />
     <meta
       property="og:image"
-      content="https://demero023.github.io/Slageng_WEB/content/logo.png"
+      content="https://slageng.co.za/content/logo.png"
     />
-    <meta property="og:url" content="https://slageng.com" />
+    <meta property="og:url" content="https://slageng.co.za" />
     <meta name="og:type" content="website" />
     <link rel="stylesheet" href="Style.css" />
     <link
@@ -41,7 +41,7 @@
     <link rel="icon" type="image/png" href="content/favicon.png" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav>
         <a href="index.html">
           <img src="content/logo.png" alt="Slageng Logo" class="logo" />
@@ -52,81 +52,121 @@
           <span></span>
         </div>
         <div class="nav-links" id="navLinks">
-          <a class="nav-link" href="events.html">Events</a>
-          <a class="nav-link" href="contact.html">Contact</a>
-          <a class="nav-link" href="about.html">About</a>
-          <a class="nav-link" href="Community.html">Community</a>
+          <a class="nav-link fade-in" href="events.html">Events</a>
+          <a class="nav-link fade-in" href="contact.html">Contact</a>
+          <a class="nav-link fade-in" href="about.html">About</a>
+          <a class="nav-link fade-in" href="Community.html">Community</a>
         </div>
       </nav>
     </header>
 
-    <section class="content-box">
+    <section class="content-box fade-in">
       <h1>Book a Table</h1>
       <!-- Booking table-->
-      <button class="book-table" id="bookNowBtn">Book now</button>
+      <button class="book-table fade-in" id="bookNowBtn">Book now</button>
     </section>
 
-    <section class="content-box">
-      <p>Chat on Whatsapp</p>
-      <a href="https://wa.me/27765271293" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+    <section class="content-box fade-in">
+      <p class="fade-in">Chat on Whatsapp</p>
+      <img
+        src="https://i.postimg.cc/VvHV1gSd/whatapp.png"
+        alt="Whatsapp"
+        class="contact-images fade-in"
+      />
+      <br />
+      <a href="https://wa.me/+27765271293" target="_blank">
+        <i class="fab fa-whatsapp fade-in"></i>
       </a>
     </section>
-    <section class="content-box">
-      <p>Our instagram page</p>
+    <section class="content-box fade-in">
+      <p class="fade-in">Our instagram page</p>
+      <img
+        src="https://i.postimg.cc/wBmykj5W/instagram.png"
+        alt="Instagram"
+        class="contact-images fade-in"
+      />
+      <br />
       <a href="https://www.instagram.com/slageng_/" target="_blank">
-        <i class="fab fa-instagram"></i>
+        <i class="fab fa-instagram fade-in"></i>
       </a>
     </section>
 
-    <section class="content-box">
-      <p>Our Facebook Page</p>
+    <section class="content-box fade-in">
+      <p class="fade-in">Our Facebook Page</p>
+      <img
+        src="https://i.postimg.cc/bwGszwBB/facebook.png"
+        alt="Facebook"
+        class="contact-images fade-in"
+      />
+      <br />
       <a
         href="https://www.facebook.com/profile.php?id=100083221124335"
         target="_blank"
       >
-        <i class="fab fa-facebook"></i>
+        <i class="fab fa-facebook fade-in"></i>
       </a>
     </section>
 
     <!-- modal for the from-->
-    <div id="bookingModal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>📅 Book a VIP Table</h2>
+    <div id="bookingModal" class="modal fade-in">
+      <div class="modal-content fade-in">
+        <span class="close-btn fade-in">&times;</span>
+        <h2 class="fade-in">📅 Book a VIP Table</h2>
         <form
           id="bookingForm"
           action="https://script.google.com/macros/s/AKfycbyUDYTc-m2Uk4F_37u6z7B12f0eVsj2wyupYfBfRAqA75eHYSVDZyqSCoSaYV-fMbMVXg/exec"
           method="POST"
+          class="fade-in"
         >
-          <label for="name">Full Name</label>
-          <input type="text" id="name" placeholder="Your full name" required />
+          <label for="name" class="fade-in">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            class="fade-in"
+            placeholder="Your full name"
+            required
+          />
 
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="076 527 1293" required />
+          <label for="phone" class="fade-in">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            class="fade-in"
+            placeholder="076 527 1293"
+            required
+          />
 
-          <label for="date">Date</label>
-          <input type="date" id="date" required />
+          <label for="date" class="fade-in">Date</label>
+          <input type="date" id="date" class="fade-in" required />
 
-          <label for="guests">Number of Guests</label>
+          <label for="guests" class="fade-in">Number of Guests</label>
           <input
             type="number"
             id="guests"
+            class="fade-in"
             placeholder="How many people?"
             required
           />
 
-          <label for="message">Special Requests e.g(VIP Table?)</label>
-          <textarea id="message" placeholder="Any special requests?"></textarea>
+          <label for="message" class="fade-in"
+            >Special Requests e.g(VIP Table?)</label
+          >
+          <textarea
+            id="message"
+            class="fade-in"
+            placeholder="Any special requests?"
+          ></textarea>
 
-          <button type="submit" class="btn-submit">Submit Booking</button>
+          <button type="submit" class="btn-submit fade-in">
+            Submit Booking
+          </button>
         </form>
       </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer fade-in">
       <!-- table of 3 colums -->
-      <table class="footer-table">
+      <table class="footer-table fade-in">
         <tr>
           <th>Slageng EST 2006</th>
           <th>Quick Links</th>
@@ -138,18 +178,21 @@
               <img
                 src="content/logo.png"
                 alt="Slageng Logo"
-                class="footer-logo"
+                class="footer-logo fade-in"
               />
             </a>
           </td>
           <td><a href="index.html">Home</a></td>
           <td>
-            <a href="https://instagram.com/yourpage" target="_blank">
-              <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com/slageng_/" target="_blank">
+              <i class="fab fa-instagram fade-in"></i>
             </a>
 
-            <a href="https://facebook.com/yourpage" target="_blank">
-              <i class="fab fa-facebook"></i>
+            <a
+              href="https://www.facebook.com/profile.php?id=100083221124335"
+              target="_blank"
+            >
+              <i class="fab fa-facebook fade-in"></i>
             </a>
           </td>
         </tr>
@@ -158,8 +201,8 @@
           <td><a href="events.html">Events</a></td>
           <!-- whatsApp-->
           <td>
-            <a href="https://wa.me/27765271293" target="_blank">
-              <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/+27765271293" target="_blank">
+              <i class="fab fa-whatsapp fade-in"></i>
             </a>
           </td>
         </tr>
