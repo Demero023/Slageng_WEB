@@ -14,7 +14,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ff2d95;
+  background-color: #9b30ff;
   color: white;
   padding: 15px 25px;
   border-radius: 50px;
@@ -28,8 +28,8 @@
 
 .floating-book-btn:hover {
   transform: scale(1.1);
-  background-color: #9b30ff;
-  box-shadow: 0 8px 30px rgba(155, 48, 255, 0.6);
+  background-color: #ff2d95;
+  box-shadow: 0 8px 30px rgba(255, 45, 149, 0.6);
 }
 
 body {
@@ -71,8 +71,7 @@ h1 {
   max-width: 100%;
   justify-content: center;
   padding: 20px;
-  color: #ff2d95;
-  box-shadow: 0 4px 20px rgba(155, 48, 255, 0.4);
+  color: white;
 }
 .nav-link {
   text-decoration: none;
@@ -592,4 +591,28 @@ nav {
 .Community-image:hover {
   transform: scale(1.1);
   box-shadow: 0 10px 25px #9b30ff;
+}
+.dj-images,
+.menu-images,
+.Small-image,
+.Big-image,
+.Community-image,
+.contact-images,
+.videos,
+.Welcome,
+.section-image {
+  position: relative;
+  z-index: 1;
+}
+
+.dj-images:hover,
+.menu-images:hover,
+.Small-image:hover,
+.Big-image:hover,
+.Community-image:hover,
+.contact-images:hover,
+.videos:hover,
+.Welcome:hover,
+.section-image:hover {
+  z-index: 999;
 }
