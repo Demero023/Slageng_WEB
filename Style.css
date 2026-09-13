@@ -532,7 +532,7 @@ nav {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #1a0a2e;
+    background-color: transparent;
     padding: 20px;
     border-radius: 10px;
     margin-top: 10px;
@@ -615,4 +615,70 @@ nav {
 .Welcome:hover,
 .section-image:hover {
   z-index: 999;
+}
+.menu-hero-image {
+  border-radius: 20px;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+/*menu*/
+
+.menu-item {
+  display: flex;
+  background-color: transparent;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 95%;
+}
+
+.menu-page-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.menu-page-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.menu-page-text {
+  text-align: center;
+  flex: 1;
+  max-height: 1450px;
+  overflow-y: auto;
+}
+
+.menu-page-text h3 {
+  color: #ff2d95;
+  margin-bottom: 10px;
+}
+
+.menu-page-text p {
+  text-align: center;
+  line-height: 1.6;
+}
+.menu-page-text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.menu-page-text::-webkit-scrollbar-track {
+  background: #1a0a2e;
+  border-radius: 10px;
+}
+
+.menu-page-text::-webkit-scrollbar-thumb {
+  background: #9b30ff;
+  border-radius: 10px;
+}
+
+.menu-page-text::-webkit-scrollbar-thumb:hover {
+  background: #ff2d95;
 }
