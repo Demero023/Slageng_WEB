@@ -537,8 +537,8 @@ nav {
     background-color: transparent;
     padding: 20px;
     border-radius: 10px;
-    z-index: 999;
-    display: none;
+    margin-top: 10px;
+          gap: 15px;
   }
 
   .nav-links.active {
