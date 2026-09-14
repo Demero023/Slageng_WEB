@@ -87,3 +87,11 @@ const observer = new IntersectionObserver(
 );
 
 fadeElements.forEach((el) => observer.observe(el));
+
+// Hide loading screen when page is fully loaded
+window.addEventListener("load", function () {
+  const loadingScreen = document.getElementById("loading-screen");
+  if (loadingScreen) {
+    loadingScreen.classList.add("hidden");
+  }
+});
