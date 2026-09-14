@@ -517,6 +517,7 @@ nav {
 
 /* Navigation links (desktop) */
 .nav-links {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -529,18 +530,20 @@ nav {
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
     width: 100%;
     background-color: transparent;
     padding: 20px;
     border-radius: 10px;
-    margin-top: 10px;
-    gap: 15px;
+    z-index: 999;
+    display: none;
   }
 
   .nav-links.active {
     display: flex;
+    flex-direction: column;
   }
 }
 /* Remove blue tap highlight on mobile */
@@ -681,4 +684,19 @@ nav {
 
 .menu-page-text::-webkit-scrollbar-thumb:hover {
   background: #ff2d95;
+}
+.home-header-image {
+  border-radius: 20px;
+  height: 350px;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  padding: 1px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.home-header-image:hover {
+  transform: scale(1.2);
+  box-shadow: transparent;
 }
