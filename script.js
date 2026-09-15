@@ -95,3 +95,22 @@ window.addEventListener("load", function () {
     loadingScreen.classList.add("hidden");
   }
 });
+
+let deferredPrompt;
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  //Prevent chrom from showing its banner
+  e.preventDefault;
+  deferredPrompt = e;
+
+  //trigger native install
+  deferredPrompt.prompt();
+
+  deferredPrompt.userChoice.then((choiceResult) => {
+    if (choiceResult.outcome === "accepted") {
+      console.log("User accepted the Slageng app install");
+    }
+
+    deferredPrompt = null;
+  });
+});

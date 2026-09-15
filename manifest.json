@@ -1,0 +1,15 @@
+{
+  "name": "Entertainment Hub",
+  "short_name": "Slageng",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "content/6b38cfb61dfa8d1694519cc2e3b487ab.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
