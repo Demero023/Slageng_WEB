@@ -55,7 +55,7 @@ if (bookingForm) {
 
     // Send data to Google Sheets
     fetch(
-      "https://script.google.com/macros/s/AKfycbw60mccnKXi1KoV8tPKHnf7HAh_ZG17rlmmKcrUOnHRzs1-sxCnEtPMCQp4Xf7HMtcq7Q/exec",
+      "https://script.google.com/macros/s/AKfycbxzmmtEjMobeR_WgEf7JqtmfiRRrmBu_08lHLGtuONRKeJvBG1_NNPZ9JsFO6ToHK0jNg/exec",
       {
         method: "POST",
         mode: "no-cors",
@@ -64,7 +64,9 @@ if (bookingForm) {
       },
     );
 
-    alert("✅ Booking submitted! We'll contact you shortly.");
+    alert(
+      "Booking submitted! Please be patient we'll contact you shortly to confirm.",
+    );
     document.getElementById("bookingForm").reset();
     document.getElementById("bookingModal").style.display = "none";
   };
